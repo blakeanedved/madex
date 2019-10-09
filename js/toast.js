@@ -25,6 +25,9 @@ Madex.toast = function (options) {
 				toast.style.opacity = '0'
 				setTimeout(function () {
 					toastContainer.removeChild(toast)
+					console.log(toastContainer.innerHTML)
+					if (toastContainer.innerHTML == '')
+						toastContainer.parentElement.removeChild(toastContainer)
 				}, options.outDuration || 375)
 			}, options.displayLength || 4000)
 		}, options.inDuration || 300)
