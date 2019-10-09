@@ -1,0 +1,25 @@
+@use 'shadows'
+
+#toast-container
+	position: fixed
+	top: 10%
+	right: 7%
+	max-width: 86%
+
+.toast
+	background-color: #373737
+	color: #ffffff
+	margin-bottom: 10px
+	width: auto
+	border-radius: 2px
+	padding: 10px 25px
+	height: auto
+	font-size: 1.1rem
+	line-height: 1.5em
+	align-items: center
+	text-align: center
+	position: relative
+
+	transition: all 0 ease 0
+
+	+shadows.z-depth-1()

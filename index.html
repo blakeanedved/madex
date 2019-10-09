@@ -16,6 +16,7 @@
 			width: 500px;
 		}
 	</style>
+	<script src="js/toast.js"></script>
 </head>
 
 <body>
@@ -40,6 +41,11 @@
 			<div class="breadcrumb">three</div>
 		</div>
 	</div>
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			Madex.toast({ html: 'hey' })
+		})
+	</script>
 </body>
 
 </html>
