@@ -1,0 +1,79 @@
+@use 'shadows'
+
+=btn($height)
+	color: #ffffff
+	background-color: #26a69a
+	border-radius: 2px
+	vertical-align: center
+	height: $height
+	line-height: $height
+	padding: 0 16px
+	text-transform: uppercase
+	display: inline-block
+	user-select: none
+	-moz-user-select: none
+	-webkit-user-select: none
+	overflow: hidden
+	cursor: pointer
+	position: relative
+	transition: .3s ease
+	@include shadows.z-depth-3()
+
+	&:hover
+		color: #ffffff
+		box-shadow: shadows.$z-depth-3, inset 0 0 100px 100px rgba(255, 255, 255, 0.15)
+
+	&:active
+		color: white
+		box-shadow: shadows.$z-depth-3, inset 0 0 100px 100px rgba(0, 0, 0, 0.3)
+
+.btn
+	+btn(36px)
+
+.btn-large
+	+btn(54px)
+
+.btn-small
+	+btn(32.4px)
+
+.btn-flat
+	color: #343434
+	background-color: inherit
+	border-radius: 2px
+	vertical-align: center
+	height: 36px
+	line-height: 36px
+	padding: 0 16px
+	text-transform: uppercase
+	display: inline-block
+	user-select: none
+	-moz-user-select: none
+	-webkit-user-select: none
+	overflow: hidden
+	cursor: pointer
+	position: relative
+	transition: .3s ease
+
+	&:active
+		background-color: #26a69a
+
+.btn-floating
+	border-radius: 50%
+	padding: 0
+	text-align: center
+
+	&.btn
+		width: 36px
+
+	&.btn-large
+		width: 54px
+
+	&.btn-small
+		width: 32.4px
+
+.disabled
+	pointer-events: none
+	background-color: #dfdfdf !important
+	color: #9F9F9F !important
+	cursor: default
+	@include shadows.z-depth-0()

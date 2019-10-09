@@ -1,0 +1,44 @@
+@use 'shadows'
+@use 'misc'
+
+.card
+	background-color: #ffffff
+	@include shadows.z-depth-3()
+
+.card-image
+	width: 100%
+	margin: 0
+	border-top-left-radius: inherit
+	border-top-right-radius: inherit
+
+	img
+		width: 100%
+		height: auto
+		border-top-left-radius: inherit
+		border-top-right-radius: inherit
+
+.card-title
+	font-weight: 400
+	font-size: 2em
+	margin-top: 0
+
+.card-content
+	font-weight: 400
+	font-size: 1em
+	padding: 1em
+	padding-top: 1.5em
+	padding-bottom: 1.5em
+
+	*:not(.card-title)
+		margin-top: 0.7em
+		margin-bottom: 0
+
+.card-action
+	border-top: 1px solid rgba(212, 212, 212, 0.596)
+	padding: 1em
+
+	+misc.valign-wrapper()
+
+	*:not(.badge)
+		text-decoration: none
+		text-transform: uppercase

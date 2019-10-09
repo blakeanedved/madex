@@ -1,0 +1,23 @@
+@use 'misc'
+
+.breadcrumb
+	color: rgba(255, 255, 255, 0.7)
+	font-size: 1.5em
+	line-height: 64px
+	height: 64px
+	display: inline-block
+	+misc.valign-wrapper()
+
+	&:last-child
+		color: #ffffff
+
+	&:not(:first-child)::before
+		content: '\E5CC'
+		font-size: 1.2em
+		color: rgba(255, 255, 255, 0.7)
+		margin: 0 10px 0 8px
+		display: inline-block
+		line-height: 64px
+		font-family: 'Material Icons'
+		font-weight: normal
+		font-style: normal
