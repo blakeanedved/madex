@@ -17,6 +17,7 @@
 		}
 	</style>
 	<script src="js/toast.js"></script>
+	<script src="js/modal.js"></script>
 </head>
 
 <body>
@@ -30,7 +31,7 @@
 				<p>content content content</p>
 			</div>
 			<div class=" card-action">
-				<a href="#" class="btn-flat">Gamertime</a>
+				<a href="#" class="btn-flat" data-target='mymodal'>modal trigger</a>
 				<a href="#" class="btn-flat">Gamertime</a>
 				<a href="#" class="btn-flat">Gamertime</a>
 			</div>
@@ -40,10 +41,23 @@
 			<div class="breadcrumb">two</div>
 			<div class="breadcrumb">three</div>
 		</div>
+		<div class="modal" id="mymodal">
+			<div class="modal-content">
+				<h1>Hi</h1>
+				<p>i aoe foiajoie foaiw ioe jfiwiofj ia eoifj oi oaij feoijaoi fio jwiof iow jifoj wiojf iowj efiojw ef
+					ksj dlkajsd fasjdjf oiefioa weif a jweijfaoiwejfiajwoeijfaoijwoeijfaoiwjeofijwoiejfoijwoj
+					woie fiowefijw fjowije fowjfe </p>
+			</div>
+			<div class="modal-footer">
+				<a href="#!" class="btn-flat red">Link 1</a>
+				<a href="#!" class="btn-flat green">Link 2</a>
+			</div>
+		</div>
 	</div>
 	<script>
-		document.addEventListener("DOMContentLoaded", function () {
-			Madex.toast({ html: 'hey' })
+		m = {}
+		document.addEventListener('DOMContentLoaded', function () {
+			m = Madex.modal('mymodal')
 		})
 	</script>
 </body>

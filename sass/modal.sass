@@ -1,0 +1,42 @@
+@use 'shadows'
+
+.modal
+	position: fixed
+	overflow-y: scroll
+	margin: auto
+	z-index: 3
+	background-color: #ffffff
+	min-width: 40%
+	left: 0
+	right: 0
+	width: 55%
+	border-radius: 2px
+	transition: .3s ease-out, display 0 ease
+	top: 4%
+	opacity: 0
+	display: none
+	transform: scaleX(0.8) scaleY(0.8)
+
+	+shadows.z-depth-5()
+
+	// &.active
+	// 	top: 10%
+	// 	opacity: 1
+	// 	transform: scaleX(1) scaleY(1)
+
+	.modal-content
+		padding: 24px
+
+		h1, h2, h3, h4, h5, h6
+			margin: 0 0 16px 0
+
+		p
+			margin: 16px 0
+
+	.modal-footer
+		padding: 4px 6px
+		text-align: right
+
+		.btn, .btn-flat, .btn-large, .btn-small
+			margin-top: 6px
+			font-size: 14px
