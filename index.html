@@ -18,13 +18,15 @@
 	</style>
 	<script src="js/toast.js"></script>
 	<script src="js/modal.js"></script>
+	<script src="js/lightbox.js"></script>
 </head>
 
 <body>
 	<div class="content">
 		<div class="card rounded">
 			<div class="card-image">
-				<img src="https://www.raspberrypi.org/magpi/wp-content/uploads/2016/11/Etcher_Anno-CROP.png">
+				<img id="mylightbox" class="lightbox"
+					src="https://www.raspberrypi.org/magpi/wp-content/uploads/2016/11/Etcher_Anno-CROP.png">
 			</div>
 			<div class="card-content">
 				<div class="card-title">Heyo</div>
@@ -55,9 +57,10 @@
 		</div>
 	</div>
 	<script>
-		m = {}
+		m = l = {}
 		document.addEventListener('DOMContentLoaded', function () {
 			m = Madex.modal('mymodal')
+			l = Madex.lightbox('mylightbox')
 		})
 	</script>
 </body>

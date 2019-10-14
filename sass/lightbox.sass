@@ -1,0 +1,12 @@
+.lightbox
+	/* transition: all .3s ease */
+
+	&:hover:not(.active)
+		opacity: 0.8
+		cursor: zoom-in
+
+	&.active:hover
+		cursor: zoom-out
+
+	&.active
+		z-index: 1000
