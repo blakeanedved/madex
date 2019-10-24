@@ -1,4 +1,4 @@
-window.Madex = window.Madex || {}
+var Madex = window.Madex || {}
 Madex.toast = function (options) {
 	var toast = document.createElement('div')
 	toast.classList = 'toast'

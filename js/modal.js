@@ -1,4 +1,4 @@
-window.Madex = window.Madex || {}
+var Madex = window.Madex || {}
 Madex.modal = function (element) {
 	var m = {}
 	m.el = document.getElementById(element)
@@ -45,7 +45,7 @@ Madex.modal = function (element) {
 	})
 
 	document.querySelectorAll(`*[data-target=${element}]`).forEach(elem => {
-		elem.addEventListener('click', e => {
+		elem.addEventListener('click', () => {
 			m.open()
 		})
 	})

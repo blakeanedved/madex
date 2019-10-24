@@ -1,2 +1,7 @@
 .sass-cache/
 *.css.map
+node_modules/
+package.json
+package-lock.json
+.eslintrc.yml
+.projector.yml
