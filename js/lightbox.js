@@ -1,4 +1,4 @@
-window.Madex = window.Madex || {}
+var Madex = window.Madex || {}
 Madex.lightbox = function (element) {
 	var l = {}
 	l.el = document.getElementById(element)
@@ -7,6 +7,7 @@ Madex.lightbox = function (element) {
 	l.open = function () {
 		var bcr = l.el.getBoundingClientRect()
 		l.ogbcr = bcr
+		l.tempborderstats = l.el.style.borderRadius
 		l.el.style.top = bcr.y
 		l.el.style.left = bcr.x
 		l.el.style.width = `${bcr.width}px`
@@ -28,7 +29,7 @@ Madex.lightbox = function (element) {
 		setTimeout(function(){
 			l.opened = true
 			l.bgel.style.opacity = '1'
-			l.el.style.transition = 'width .3s ease, height .3s ease, transform .3s ease'
+			l.el.style.transition = 'width .3s ease, height .3s ease, transform .3s ease, border-radius .2s ease'
 			var width, height;
 			if ((bcr.width / window.innerWidth) > (bcr.height / window.innerHeight)){
 				width = window.innerWidth * 0.9
@@ -40,6 +41,7 @@ Madex.lightbox = function (element) {
 			l.el.style.transform = `translate(${(window.innerWidth / 2) - (width / 2) - bcr.x}px, ${(window.innerHeight / 2) - (height / 2) - bcr.y}px)`
 			l.el.style.width = `${width}px`
 			l.el.style.height = `${height}px`
+			l.el.style.borderRadius = '0'
 		}, 20)
 		this.el.classList.add('active')
 	}
@@ -53,28 +55,30 @@ Madex.lightbox = function (element) {
 		setTimeout(function(){
 			l.opened = false
 			l.bgel.style.opacity = '0'
-			l.el.style.transition = 'width .3s ease, height .3s ease, transform .3s ease'
+			l.el.style.transition = 'width .3s ease, height .3s ease, transform .3s ease, border-radius .3s ease'
 			l.el.style.transform = `translate(0, 0)`
 			l.el.style.width = `${l.ogbcr.width}px`
 			l.el.style.height = `${l.ogbcr.height}px`
+			l.el.style.borderRadius = l.tempborderstats
+			delete l.tempborderstats
 			setTimeout(function(){
 				document.body.removeChild(l.bgel)
 				delete l.bgel
 				l.el.style.position = 'static'
 				l.el.style.transition = ''
+				l.el.classList.remove('active')
 			}, 300)
 		}, 20)
-		this.el.classList.remove('active')
 	}
 
-	document.addEventListener("click", (event) => {
+	document.addEventListener("click", () => {
 		if (l.opened == true) {
 			l.close()
 		}
 	})
 
-	l.el.addEventListener('click', e => {
-		if (!l.el.classList.contains('active')) {
+	l.el.addEventListener('click', () => {
+		if (!l.opened) {
 			l.open()
 		}
 	})
