@@ -11,10 +11,10 @@
 - [x] lightboxes
 - [x] badges
 - [x] nav
-- [ ] parallax
+- [ ] forms
+- [ ] dropdown
 - [ ] tooltips
 - [ ] sidenav
 - [ ] carousel
-- [ ] dropdown
-- [ ] forms
+- [ ] parallax
 - [ ] mobile
