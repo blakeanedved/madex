@@ -2516,6 +2516,49 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 1000;
 }
 
+nav {
+  width: calc(100vw - 20px);
+  height: 64px;
+  line-height: 64px;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background-color: #ee5e73;
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 0 10px;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+nav.contain {
+  padding: 0 15vw;
+  width: 70vw;
+}
+nav .links {
+  float: right;
+  list-style-type: none;
+  display: flex;
+}
+nav .links a {
+  padding: 0 20px;
+  box-shadow: none;
+  color: inherit;
+  display: inline-block;
+}
+nav .links a:hover {
+  box-shadow: inset 0 0 100px 100px #00000029;
+}
+nav .links a.active {
+  box-shadow: inset 0 0 100px 100px #00000029;
+}
+nav .logo {
+  font-size: 2.1rem;
+  float: left;
+}
+nav img {
+  height: inherit;
+}
+
 body {
   font-family: Roboto, sans-serif;
 }

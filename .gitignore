@@ -5,3 +5,4 @@ package.json
 package-lock.json
 .eslintrc.yml
 .projector.yml
+.tern-project
