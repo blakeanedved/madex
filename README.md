@@ -10,9 +10,9 @@
 - [x] toasts
 - [x] lightboxes
 - [x] badges
+- [x] nav
 - [ ] parallax
 - [ ] tooltips
-- [ ] nav
 - [ ] sidenav
 - [ ] carousel
 - [ ] dropdown
