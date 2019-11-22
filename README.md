@@ -11,7 +11,7 @@
 - [x] lightboxes
 - [x] badges
 - [x] nav
-- [ ] forms
+- [/] forms
 - [ ] dropdown
 - [ ] tooltips
 - [ ] sidenav
